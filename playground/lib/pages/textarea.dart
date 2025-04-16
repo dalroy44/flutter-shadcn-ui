@@ -11,8 +11,8 @@ class TextareaPage extends StatefulWidget {
 }
 
 class _TextareaPageState extends State<TextareaPage> {
-  bool _enabled = true;
-  bool _resizable = true;
+  final bool _enabled = true;
+  final bool _resizable = true;
   final TextEditingController _controller = TextEditingController();
 
   @override
