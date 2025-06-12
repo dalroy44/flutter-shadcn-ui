@@ -30,6 +30,7 @@ import 'package:playground/pages/tabs.dart';
 import 'package:playground/pages/textarea.dart';
 import 'package:playground/pages/time_picker.dart';
 import 'package:playground/pages/toast.dart';
+import 'package:playground/pages/toggle.dart';
 import 'package:playground/pages/tooltip.dart';
 import 'package:playground/pages/typography.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
@@ -309,6 +310,12 @@ final router = GoRouter(
       path: '/textarea',
       builder: (context, state) {
         return const TextareaPage();
+      },
+    ),
+    GoRoute(
+      path: '/toggle',
+      builder:(context, state) {
+        return const TogglePage();
       },
     ),
   ],

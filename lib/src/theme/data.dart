@@ -33,6 +33,7 @@ import 'package:shadcn_ui/src/theme/components/tabs.dart';
 import 'package:shadcn_ui/src/theme/components/textarea.dart';
 import 'package:shadcn_ui/src/theme/components/time_picker.dart';
 import 'package:shadcn_ui/src/theme/components/toast.dart';
+import 'package:shadcn_ui/src/theme/components/toggle.dart';
 import 'package:shadcn_ui/src/theme/components/tooltip.dart';
 import 'package:shadcn_ui/src/theme/text_theme/theme.dart';
 import 'package:shadcn_ui/src/theme/themes/base.dart';
@@ -98,6 +99,7 @@ class ShadThemeData extends ShadBaseTheme {
     ShadSeparatorTheme? separatorTheme,
     ShadSonnerTheme? sonnerTheme,
     ShadTextareaTheme? textareaTheme,
+    ShadToggleTheme? toggleTheme,
   }) {
     final effectiveRadius =
         radius ?? const BorderRadius.all(Radius.circular(6));
@@ -245,6 +247,7 @@ class ShadThemeData extends ShadBaseTheme {
           effectiveVariant.separatorTheme().mergeWith(separatorTheme),
       sonnerTheme: effectiveVariant.sonnerTheme().mergeWith(sonnerTheme),
       textareaTheme: effectiveVariant.textareaTheme().mergeWith(textareaTheme),
+      toggleTheme: effectiveVariant.toggleTheme().mergeWith(toggleTheme),
     );
   }
 
@@ -302,6 +305,7 @@ class ShadThemeData extends ShadBaseTheme {
     required super.separatorTheme,
     required super.sonnerTheme,
     required super.textareaTheme,
+    required super.toggleTheme,
   });
 
   static ShadThemeData lerp(ShadThemeData a, ShadThemeData b, double t) {
@@ -580,6 +584,7 @@ class ShadThemeData extends ShadBaseTheme {
     ShadSeparatorTheme? separatorTheme,
     ShadSonnerTheme? sonnerTheme,
     ShadTextareaTheme? textareaTheme,
+    ShadToggleTheme? toggleTheme,
   }) {
     return ShadThemeData(
       colorScheme: colorScheme ?? this.colorScheme,
@@ -640,6 +645,7 @@ class ShadThemeData extends ShadBaseTheme {
       separatorTheme: separatorTheme ?? this.separatorTheme,
       sonnerTheme: sonnerTheme ?? this.sonnerTheme,
       textareaTheme: textareaTheme ?? this.textareaTheme,
+      toggleTheme: toggleTheme ?? this.toggleTheme,
     );
   }
 }

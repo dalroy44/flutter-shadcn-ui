@@ -38,6 +38,7 @@ import 'package:shadcn_ui/src/theme/components/tabs.dart';
 import 'package:shadcn_ui/src/theme/components/textarea.dart';
 import 'package:shadcn_ui/src/theme/components/time_picker.dart';
 import 'package:shadcn_ui/src/theme/components/toast.dart';
+import 'package:shadcn_ui/src/theme/components/toggle.dart';
 import 'package:shadcn_ui/src/theme/components/tooltip.dart';
 import 'package:shadcn_ui/src/theme/text_theme/text_styles_default.dart';
 import 'package:shadcn_ui/src/theme/text_theme/theme.dart';
@@ -1004,6 +1005,16 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
       maxHeight: 500,
       resizable: true,
       scrollbarPadding: const EdgeInsets.only(bottom: 10),
+    );
+  }
+
+  @override
+  ShadToggleTheme toggleTheme() {
+    return ShadToggleTheme(
+      pressedForegroundColor: colorScheme.accentForeground,
+      pressedBackgroundColor: colorScheme.accent,
+      hoveredBackgroundColor: colorScheme.muted,
+      hoveredForegroundColor: colorScheme.mutedForeground,
     );
   }
 }
